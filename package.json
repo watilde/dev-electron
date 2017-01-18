@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "dev-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "rm": "rm -rf node_modules/electron/dist/Electron.app",
+    "link": "ln -s ~/Development/electron/out/D/Electron.app node_modules/electron/dist/Electron.app",
+    "postinstall": "npm run rm && npm run link",
+    "start": "electron main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.4.14"
+  }
+}
